@@ -2,11 +2,25 @@
 <html>
 
 <head>
-    <title>Lesson 1</title>
+    <title>Lesson 1a</title>
 </head>
 
 <body>
-    <h1>Lesson 1</h1>
+    <!-- this is code to use react to display a button on the website with the text "Good Job" -->
+    <div class="js-container">Hello</div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const button = <button>Good Job {2 + 2}!</button>;
+        const container = document.querySelector('.js-container');
+        console.log("this is ", container);
+        const render_container =
+            <div>
+                {button}
+            </div>;
+        ReactDOM.createRoot(container).render(render_container);
+    </script>
 </body>
 
 </html>
